@@ -1,0 +1,201 @@
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenido{
+    background-color: #fff;
+    height: 2000px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+
+header {
+    background-color: #127cc1;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerlogo img{
+    max-width: 30%;
+    height: auto;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0 40px 0 0;
+}
+
+.menu li {
+    margin-right: 20px;
+    position: relative;
+}
+.menu ul li a {
+    width: 100%;
+}
+
+li.desplegable {
+    font-size: 14px;
+}
+.desplegable ul {
+    display: none;
+    position: absolute;
+    background-color: #00102e;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.desplegable:hover ul {
+    display: block;
+}
+
+.desplegable a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.desplegable:hover {
+    color: #00102e;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.seccion {
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    height: 68px;
+    box-sizing: border-box;
+}
+
+.seccion-negra {
+    background-color: #000;
+}
+
+.seccion-azul {
+    background-color: #127cc1;
+}
+.seccion h2 {
+    margin: 0; 
+    font-size: 24px; 
+}
+svg {
+    fill: #fff;
+    max-height: 20px;
+}
+.sydney-svg-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    line-height: 1;
+}
+/* menu responsive */
+/* inicio de estilos para nuevo menu, prueba de hacer responsive los navs */
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+.menu-toggle {
+    display: none;
+}
+@media (max-width: 1080px){
+    .menu {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+    }
+    .menu ul {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .menu-container:hover .menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    a.menu-toggle:hover{
+        cursor: pointer;
+    }
+}
+.rotate-90 svg {
+    transform: rotate(-90deg);
+}
+#colophon.site-footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 30px;
+    background-color: #00102e;
+    height: 100px;
+}
+.social-profile {
+    color: grey;
+    float: right;
+}
+.sydney-credits {
+    float: left;
+    color: grey;
+}
+.acordeon{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    --title-size: 20px; /* variable para tamaño del título*/
+    --title-padding: 10px; /* variable para tamaño del padding */
+    height: 100%;
+    border: 2px solid cyan; /*un color como para ver lo que abarca la etiqueta ul*/
+ 
+}
+.acordeon > li{
+    --item-height : calc(var(--title-size) + var(--title-padding) * 4); /* variable innecesaria pero se usa para la calcular la altura del item, originalmente se multiplica el padding por 2 pero al usar etiquetas h3 no queda bien */
+    border: 1px solid #127cc1;
+    height: var(--item-height);
+    overflow: hidden;
+    transition: height 0.25s;
+    display: flex;
+    flex-direction: column;
+    
+}
+.acordeon > li div{
+    flex: 1;
+    overflow-y: auto;
+}
+
+.acordeon > li > h3{
+    background: #fff url(./angle-arrow-down_icon-icons.com_73683.svg) calc(100% - 20px) center/auto var(--title-size) no-repeat;
+    color: #127cc1;
+    font-size: var(--title-size);
+    line-height: var(--title-size);
+    padding: var(--title-padding);
+}
+.acordeon > li > div{
+    padding: 2em;
+}
+.acordeon > li.open{
+    height: 270px; 
+}
+
+
+/** Footer **/
