@@ -169,7 +169,7 @@ svg {
  
 }
 .acordeon > li{
-    --item-height : calc(var(--title-size) + var(--title-padding) * 4); /* variable innecesaria pero se usa para la calcular la altura del item, originalmente se multiplica el padding por 2 pero al usar etiquetas h3 no queda bien */
+    --item-height : calc(var(--title-size) + var(--title-padding) * 6); /* variable innecesaria pero se usa para la calcular la altura del item, originalmente se multiplica el padding por 2 pero al usar etiquetas h3 no queda bien */
     border: 1px solid #127cc1;
     height: var(--item-height);
     overflow: hidden;
