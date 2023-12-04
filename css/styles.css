@@ -39,6 +39,7 @@ header {
     display: flex;
     margin: 0;
     padding: 0 0 0 0;
+    text-align: center;
 }
 
 .menu li {
@@ -120,10 +121,10 @@ svg {
     display: none;
 }
 @media (max-width: 1080px){
-    .menu {
-        display: none;
-        position: absolute;
-        cursor: pointer;
+    .desplegable  {
+        display: block;
+        top: 40px;
+        left: 0;
     }
 
     .menu-toggle {
