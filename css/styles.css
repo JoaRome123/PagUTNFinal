@@ -121,8 +121,8 @@ svg {
     display: none;
 }
 @media (max-width: 1080px){
-    .desplegable  {
-        display: block;
+   .desplegable  {   /*falta saber como poner en vertical los desplegables sin petatearlo todo*/
+        display: none;
         top: 40px;
         left: 0;
     }
