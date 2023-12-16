@@ -16,9 +16,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-            setInterval("location.reload()",5000);
-    </script>
-    <script>
         $(document).ready(function() {
             window.addEventListener('dfMessengerLoaded', function (event) {
                 var $r1 = document.querySelector("df-messenger");
@@ -426,7 +423,7 @@
     <div class="bot">
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
         <df-messenger
-            intent=""
+            intent="welcome"
             chat-title="Asistente UTN "
             agent-id="c82bc5b0-5ab8-47f1-b26b-3d594eee6da2"
             language-code="es"
