@@ -12,12 +12,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 header { 
     background-color: #127cc1;
     color: #fff;
-    padding: 10px;
+    padding: 10px 30px 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +33,7 @@ header {
 .logo img {
     max-width: 100%;
     height: auto;
+    padding-left: 30px;
 }
 
 .menu ul {
@@ -163,8 +166,7 @@ svg {
     padding: 0;
     --title-size: 20px; /* variable para tamaño del título*/
     --title-padding: 10px; /* variable para tamaño del padding */
-    height: 100%;
-    border: 2px solid cyan; /*un color como para ver lo que abarca la etiqueta ul*/
+    height: 100%; /*un color como para ver lo que abarca la etiqueta ul*/
  
 }
 .acordeon > li{
