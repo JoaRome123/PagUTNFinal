@@ -21,32 +21,23 @@
                 var $r1 = document.querySelector("df-messenger");
                 var $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
                 var $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input");
-                
-                adjustChatHeight(); // Llamada inicial para ajustar la altura según la resolución actual
-
-                // Función para ajustar la altura del chat en función de la altura de la ventana
+                adjustChatHeight();
                 function adjustChatHeight() {
                     var windowHeight = window.innerHeight;
                     var chatHeight = calculateChatHeight(windowHeight);
-                    
                     var sheet = new CSSStyleSheet;
                     sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: ${chatHeight}px }`);
                     $r2.shadowRoot.adoptedStyleSheets = [sheet];
                 }
-
-                // Función para calcular la altura del chat según la altura de la ventana
                 function calculateChatHeight(windowHeight) {
-                    // Puedes personalizar esta lógica según tus preferencias
                     if (windowHeight < 768) {
-                        return 450; // ajusta la altura para resoluciones más pequeñas
+                        return 450; 
                     } else if (windowHeight < 1080) {
-                        return 600; // altura para resoluciones intermedias
+                        return 600;
                     } else {
-                        return 650; // altura para resoluciones mayores
+                        return 650;
                     }
                 }
-
-                // Reajusta la altura cuando cambia el tamaño de la ventana
                 window.addEventListener('resize', function() {
                     adjustChatHeight();
                 });
